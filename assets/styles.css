@@ -1,7 +1,8 @@
-/* ==============  Design Tokens  ============== */
+/* =========================================
+   Design tokens (dark-first)
+========================================= */
 :root {
-  /* Light theme */
-  --bg: #0b1220; /* use dark as default for a sleek hero */
+  --bg: #0b1220;
   --surface: #0f172a;
   --surface-2: #111a2e;
   --text: #e7ecf3;
@@ -21,7 +22,9 @@
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
-/* ==============  Base  ============== */
+/* =========================================
+   Base
+========================================= */
 * {
   box-sizing: border-box;
 }
@@ -45,7 +48,6 @@ body {
   flex-direction: column;
 }
 
-/* Typographic rhythm */
 h1,
 h2,
 h3 {
@@ -67,7 +69,6 @@ p {
   color: var(--muted);
 }
 
-/* Links & focus */
 a {
   color: var(--brand);
   text-decoration: none;
@@ -81,7 +82,9 @@ a:hover {
   border-radius: 6px;
 }
 
-/* ==============  Layout  ============== */
+/* =========================================
+   Layout
+========================================= */
 .container {
   max-width: var(--max);
   margin: 0 auto;
@@ -138,7 +141,9 @@ a:hover {
   margin: 8px auto 24px;
 }
 
-/* Content split */
+/* =========================================
+   Panels & lists
+========================================= */
 .split {
   display: grid;
   gap: 18px;
@@ -151,7 +156,6 @@ a:hover {
   }
 }
 
-/* Panels */
 .panel {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -179,11 +183,13 @@ a:hover {
   color: var(--ok);
 }
 
-/* ==============  Form  ============== */
+/* =========================================
+   Form (robust selectors)
+========================================= */
 .lead-form {
   display: grid;
   gap: 12px;
-  max-width: 560px;
+  max-width: 640px;
   margin: 16px auto 0;
 }
 .row.two-col {
@@ -200,8 +206,12 @@ a:hover {
 .field {
   width: 100%;
 }
-.field input,
-.field textarea {
+
+/* Make sure all controls stretch and look consistent */
+.lead-form input[type='text'],
+.lead-form input[type='email'],
+.lead-form input[type='url'],
+.lead-form textarea {
   width: 100%;
   background: color-mix(in srgb, var(--surface) 92%, white 8%);
   border: 1px solid var(--border);
@@ -209,30 +219,33 @@ a:hover {
   border-radius: 12px;
   padding: 14px 16px;
   font-size: 16px;
+  line-height: 1.4;
   transition: border-color 0.15s ease, box-shadow 0.15s ease,
     background 0.15s ease;
 }
-.field textarea {
+.lead-form textarea {
   resize: vertical;
   min-height: 120px;
 }
-.field input::placeholder,
-.field textarea::placeholder {
-  color: color-mix(in srgb, var(--muted) 80%, var(--text) 20%);
+.lead-form input::placeholder,
+.lead-form textarea::placeholder {
+  color: color-mix(in srgb, var(--muted) 82%, var(--text) 18%);
 }
-.field input:focus,
-.field textarea:focus {
+
+.lead-form input:focus,
+.lead-form textarea:focus {
   border-color: var(--brand);
   box-shadow: 0 0 0 4px color-mix(in srgb, var(--brand) 18%, transparent);
   outline: none;
 }
+
 .actions {
   display: flex;
   justify-content: center;
   margin-top: 4px;
 }
 
-/* honeypot */
+/* Honeypot */
 .hp {
   position: absolute !important;
   left: -10000px;
@@ -242,7 +255,9 @@ a:hover {
   overflow: hidden;
 }
 
-/* ==============  Buttons  ============== */
+/* =========================================
+   Buttons
+========================================= */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -258,7 +273,7 @@ a:hover {
   box-shadow: 0 8px 18px color-mix(in srgb, var(--brand) 25%, transparent);
   transition: transform 0.06s ease, filter 0.15s ease, box-shadow 0.15s ease;
   cursor: pointer;
-  min-width: 180px;
+  min-width: 200px;
 }
 .btn:hover {
   filter: brightness(1.05);
@@ -299,7 +314,9 @@ a:hover {
   margin-top: 10px;
 }
 
-/* ==============  Footer  ============== */
+/* =========================================
+   Footer
+========================================= */
 .footer {
   opacity: 0.9;
   font-size: 14px;
@@ -313,7 +330,9 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ==============  Utilities & a11y  ============== */
+/* =========================================
+   Utilities & a11y
+========================================= */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -330,8 +349,6 @@ a:hover {
   place-items: center;
   min-height: 70vh;
 }
-
-/* Gentle container breathing on ultra-wide screens */
 @media (min-width: 1280px) {
   .container {
     padding-left: 32px;
