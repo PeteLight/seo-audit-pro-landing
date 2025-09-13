@@ -1,22 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SEO Audit Pro – Coming Soon</title>
-    <style>
-      body {
-        font-family: sans-serif;
-        text-align: center;
-        padding: 4rem;
-      }
-      h1 {
-        color: #2563eb;
-      }
-    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SEO Audit Pro — Client-friendly SEO audit reports</title>
+    <meta
+      name="description"
+      content="Plain-English SEO audits your clients actually understand. Exportable reports, Lighthouse insights, quick wins, and more."
+    />
+
+    <!-- Social preview -->
+    <meta
+      property="og:title"
+      content="SEO Audit Pro — Client-friendly SEO audit reports"
+    />
+    <meta
+      property="og:description"
+      content="Plain-English SEO audits your clients actually understand. Exportable reports, Lighthouse insights, quick wins, and more."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://seo-audit-pro.com" />
+    <meta property="og:image" content="https://seo-audit-pro.com/Logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preload" href="/assets/styles.css" as="style" />
+    <link rel="stylesheet" href="/assets/styles.css" />
   </head>
   <body>
-    <h1>SEO Audit Pro</h1>
-    <p>Client-friendly SEO audit reports, launching soon.</p>
+    <header class="container nav" role="banner">
+      <a class="brand" href="/">
+        <img src="/Logo.png" alt="" class="brand-mark" />
+        <span class="brand-text">SEO Audit Pro</span>
+      </a>
+      <span class="badge" aria-label="Private beta forming">Private beta</span>
+    </header>
+
+    <main class="container main" id="main" role="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="pill">Plain-English SEO reports</p>
+        <h1 id="hero-title">
+          Turn technical audits into reports your clients actually read
+        </h1>
+        <p class="lede">
+          Actionable, jargon-free SEO audits with Lighthouse, metadata, robots,
+          domain authority & quick wins — plus a polished PDF export for
+          clients.
+        </p>
+
+        <!-- Replace action URL with your form provider (Formspree/Buttondown/Mailchimp) -->
+        <form
+          class="waitlist"
+          action="https://formspree.io/f/your_form_id_here"
+          method="POST"
+        >
+          <label class="sr-only" for="email">Email address</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            inputmode="email"
+            autocomplete="email"
+            placeholder="you@agency.co"
+            required
+          />
+          <button type="submit">Join the beta</button>
+          <input
+            type="hidden"
+            name="_redirect"
+            value="https://seo-audit-pro.com/thanks.html"
+          />
+        </form>
+        <p class="note">No spam. Unsubscribe anytime.</p>
+      </section>
+
+      <section class="split">
+        <div class="panel">
+          <h2 class="kicker">Designed for agencies & small businesses</h2>
+          <ul class="list">
+            <li>
+              <span class="tick" aria-hidden="true">✔</span> Clear status tags &
+              quick wins your clients can act on
+            </li>
+            <li>
+              <span class="tick" aria-hidden="true">✔</span> Lighthouse +
+              on-page checks in one place
+            </li>
+            <li>
+              <span class="tick" aria-hidden="true">✔</span> Export beautiful
+              PDF reports for offline sharing
+            </li>
+            <li>
+              <span class="tick" aria-hidden="true">✔</span> Friendly wording
+              (no jargon walls)
+            </li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h2 class="kicker">Roadmap highlights</h2>
+          <ul class="list dots">
+            <li>Readiness scoring & benchmarks</li>
+            <li>Competitor snapshots</li>
+            <li>Custom branding on PDFs</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container footer" role="contentinfo">
+      <small>© <span id="year"></span> SEO Audit Pro</small>
+      <span aria-hidden="true">·</span>
+      <a href="mailto:info@seo-audit-pro.com">Contact</a>
+      <span aria-hidden="true">·</span>
+      <a href="/privacy.html">Privacy</a>
+      <span aria-hidden="true">·</span>
+      <a href="https://github.com/PeteLight/seo-audit-pro-landing">GitHub</a>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
