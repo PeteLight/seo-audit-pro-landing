@@ -1,18 +1,18 @@
 /* =========================================
-   Design tokens (dark-first)
+   Light theme design tokens
 ========================================= */
 :root {
-  --bg: #0b1220;
-  --surface: #0f172a;
-  --surface-2: #111a2e;
-  --text: #e7ecf3;
-  --muted: #a8b3cf;
-  --border: #1b2742;
+  --bg: #f6f8fb;
+  --surface: #ffffff;
+  --surface-2: #f1f5f9;
+  --text: #0f172a; /* slate-900 */
+  --muted: #475569; /* slate-600 */
+  --border: #e2e8f0; /* slate-200 */
 
-  --brand: #3b82f6;
-  --brand-600: #2563eb;
-  --ok: #22c55e;
-  --shadow: 0 12px 28px rgba(2, 6, 23, 0.45);
+  --brand: #2563eb; /* blue-600 */
+  --brand-600: #1d4ed8;
+
+  --ok: #16a34a;
 
   --radius: 14px;
   --max: 960px;
@@ -35,9 +35,9 @@ body {
 body {
   margin: 0;
   background: radial-gradient(
-      1200px 700px at 20% -10%,
-      rgba(59, 130, 246, 0.12),
-      transparent 52%
+      1100px 620px at 15% -10%,
+      rgba(37, 99, 235, 0.06),
+      transparent 55%
     )
     var(--bg);
   color: var(--text);
@@ -161,7 +161,6 @@ a:hover {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 20px;
-  box-shadow: var(--shadow);
 }
 .kicker {
   font-weight: 700;
@@ -184,7 +183,7 @@ a:hover {
 }
 
 /* =========================================
-   Form (robust selectors)
+   Form
 ========================================= */
 .lead-form {
   display: grid;
@@ -207,13 +206,12 @@ a:hover {
   width: 100%;
 }
 
-/* Make sure all controls stretch and look consistent */
 .lead-form input[type='text'],
 .lead-form input[type='email'],
 .lead-form input[type='url'],
 .lead-form textarea {
   width: 100%;
-  background: color-mix(in srgb, var(--surface) 92%, white 8%);
+  background: #fff;
   border: 1px solid var(--border);
   color: var(--text);
   border-radius: 12px;
@@ -229,7 +227,7 @@ a:hover {
 }
 .lead-form input::placeholder,
 .lead-form textarea::placeholder {
-  color: color-mix(in srgb, var(--muted) 82%, var(--text) 18%);
+  color: color-mix(in srgb, var(--muted) 75%, var(--text) 25%);
 }
 
 .lead-form input:focus,
@@ -270,8 +268,7 @@ a:hover {
   padding: 12px 18px;
   border-radius: 12px;
   text-decoration: none;
-  box-shadow: 0 8px 18px color-mix(in srgb, var(--brand) 25%, transparent);
-  transition: transform 0.06s ease, filter 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.06s ease, filter 0.15s ease;
   cursor: pointer;
   min-width: 200px;
 }
@@ -283,13 +280,12 @@ a:hover {
 }
 
 .btn-secondary {
-  background: color-mix(in srgb, var(--surface) 95%, white 5%);
+  background: #fff;
   color: var(--text);
   border: 1px solid var(--border);
 }
 .btn-secondary:hover {
-  filter: none;
-  box-shadow: var(--shadow);
+  background: var(--surface-2);
 }
 
 .btn-ghost {
@@ -297,15 +293,19 @@ a:hover {
   color: var(--brand);
   border: 1px solid var(--border);
 }
+.btn-ghost:hover {
+  background: var(--surface-2);
+}
 
-/* Contact block */
+/* =========================================
+   Contact block
+========================================= */
 .contact-card {
   margin-top: 26px;
   padding: 20px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--surface);
-  box-shadow: var(--shadow);
 }
 .button-row {
   display: flex;
