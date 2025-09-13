@@ -61,29 +61,33 @@
           class="lead-form"
           action="https://formspree.io/f/mldwvkgz"
           method="POST"
+          novalidate
         >
-          <div class="field">
-            <label class="sr-only" for="name">Your name</label>
-            <input
-              id="name"
-              name="name"
-              type="text"
-              placeholder="Your name"
-              required
-            />
+          <div class="row two-col">
+            <div class="field">
+              <label class="sr-only" for="name">Your name</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Your name"
+                required
+              />
+            </div>
+            <div class="field">
+              <label class="sr-only" for="email">Email address</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                inputmode="email"
+                autocomplete="email"
+                placeholder="you@company.com"
+                required
+              />
+            </div>
           </div>
-          <div class="field">
-            <label class="sr-only" for="email">Email address</label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              inputmode="email"
-              autocomplete="email"
-              placeholder="you@company.com"
-              required
-            />
-          </div>
+
           <div class="field">
             <label class="sr-only" for="website">Website (optional)</label>
             <input
@@ -93,6 +97,7 @@
               placeholder="Website (optional)"
             />
           </div>
+
           <div class="field">
             <label class="sr-only" for="message"
               >How can we help? (optional)</label
@@ -121,7 +126,9 @@
             value="https://seo-audit-pro.com/thanks.html"
           />
 
-          <button type="submit" class="btn">Register interest</button>
+          <div class="actions">
+            <button type="submit" class="btn">Register interest</button>
+          </div>
           <p class="note">
             We’ll only contact you about the beta and important updates.
             Unsubscribe anytime.
@@ -169,16 +176,9 @@
           Questions, partnerships, or early feedback — I’d love to hear from
           you.
         </p>
-        <div class="contact-links">
+        <div class="button-row">
           <a class="btn btn-secondary" href="mailto:pete@seo-audit-pro.com"
             >Email me</a
-          >
-          <a
-            class="btn btn-ghost"
-            href="https://github.com/PeteLight/seo-audit-pro-landing"
-            target="_blank"
-            rel="noopener"
-            >GitHub</a
           >
         </div>
       </section>
