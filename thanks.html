@@ -4,24 +4,24 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Thanks — SEO Audit Pro</title>
+    <link rel="icon" href="/seo-audit-pro-favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="/assets/styles.css" />
+    <script src="/assets/app.js" defer></script>
   </head>
   <body>
-    <main
-      class="container"
-      style="display: grid; place-items: center; min-height: 70vh"
-    >
-      <section class="panel" style="text-align: center; max-width: 520px">
-        <h1>🎉 You’re on the list</h1>
-        <p class="lede">We’ll email you when the private beta opens.</p>
-        <p><a href="/" style="color: #9cc0ff">Back to site</a></p>
+    <main class="container center">
+      <section
+        class="panel"
+        aria-labelledby="thanks-title"
+        style="max-width: 520px; text-align: center"
+      >
+        <h1 id="thanks-title">🎉 Thanks — we’ve got your details</h1>
+        <p class="lede">We’ll be in touch when the private beta opens.</p>
+        <p><a href="/">Back to site</a></p>
       </section>
     </main>
-    <footer class="container footer">
-      © <span id="year"></span> SEO Audit Pro
+    <footer class="container footer" role="contentinfo">
+      <small>© <span id="year"></span> SEO Audit Pro</small>
     </footer>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
   </body>
 </html>

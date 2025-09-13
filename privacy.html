@@ -4,26 +4,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Privacy — SEO Audit Pro</title>
+    <link rel="icon" href="/seo-audit-pro-favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="/assets/styles.css" />
+    <script src="/assets/app.js" defer></script>
   </head>
   <body>
-    <main class="container">
+    <main class="container" role="main">
       <h1>Privacy</h1>
       <p class="lede">
-        We collect email addresses solely to notify you about SEO Audit Pro. We
-        don’t sell data or share it with third parties. You can unsubscribe
-        anytime via the link in our emails.
+        We collect the details you submit on our contact form (e.g., name,
+        email, website, message) only to reply to you, share beta invites, and
+        send important product updates for SEO Audit Pro. We don’t sell or share
+        your data. You can opt out at any time.
+      </p>
+      <p class="muted">
+        We use Formspree to process form submissions on our behalf. Their
+        processing of your data is subject to their own privacy policy.
       </p>
       <p>
         Contact:
-        <a href="mailto:info@seo-audit-pro.com">info@seo-audit-pro.com</a>
+        <a href="mailto:pete@seo-audit-pro.com">pete@seo-audit-pro.com</a>
       </p>
     </main>
-    <footer class="container footer">
-      © <span id="year"></span> SEO Audit Pro
+    <footer class="container footer" role="contentinfo">
+      <small>© <span id="year"></span> SEO Audit Pro</small>
     </footer>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
   </body>
 </html>
